@@ -1,0 +1,22 @@
+<paquet
+	prefix="valider_inscription"
+	categorie="auteur"
+	version="0.1.0"
+	etat="dev"
+	compatibilite="[3.0.21;3.0.*]"
+	logo=""
+	documentation=""
+>
+	<!--
+		Paquet genere le 2016-01-15 16:58:27
+	-->
+
+	<nom>Valider Inscriptions</nom>
+
+	<auteur lien='http://vertige.org'>Michel @ Vertige ASBL</auteur>
+
+	<licence>GNU/GPL</licence>
+
+
+
+</paquet>
