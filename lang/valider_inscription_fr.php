@@ -14,6 +14,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// I
 	'info_10nouveau' => 'à valider',
 
+	// M
+	'message_inscription_ok' => 'Votre identifiant vous sera envoyé par email, une fois que votre demande d\'inscription aura été validée par un·e administrateur·trice.',
+
 	// N
 	'notification_inscription_a_valider_titre' => 'Nouvelle incription à valider sur @nom_site@',
 	'notification_inscription_a_valider_texte' => 'Une nouvelle inscription à été enregistrée sur le site @nom_site@. Rendez-vous sur @lien_auteur@ pour la valider !',

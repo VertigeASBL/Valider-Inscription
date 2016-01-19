@@ -17,5 +17,6 @@
 	<necessite nom="notifavancees" />
 
 	<pipeline nom="autoriser" inclure="valider_inscription_autorisations.php" />
+	<pipeline nom="formulaire_traiter" inclure="valider_inscription_pipelines.php" />
 
 </paquet>
