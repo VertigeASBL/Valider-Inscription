@@ -39,6 +39,19 @@ function action_valider_auteur_dist() {
 	// attribuer un jeton pour confirmation par clic sur un lien
 	$desc['jeton'] = auteur_attribuer_jeton($id_auteur);
 
+	// Si on doit lier l'auteur à une zone, il faut le faire ici,
+	// parce que les visiteurs n'ont pas les autorisations nécessaires
+	// lors de l'inscription
+	if (test_plugin_actif('auteur2zone')) {
+
+		include_spip('inc/config');
+		$config = lire_config('auteur2zone');
+
+        // Lier à la zone
+        include_spip('action/editer_zone');
+        zone_lier($config['auteur_zone_auto'], 'auteur', $id_auteur);
+	}
+
 	$envoyer_inscription = charger_fonction('envoyer_inscription', '');
 	list($sujet, $msg, $from, $head) = $envoyer_inscription($desc, $nom, '6forum');
 
