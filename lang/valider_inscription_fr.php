@@ -12,7 +12,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'erreur_validation' => 'Une erreur s\'est produite lors de la validation',
 
 	// I
-	'info_10nouveau' => 'à valider',
+	'info_nouveau' => 'à valider',
+	'info_valider' => 'Un email sera automatiquement envoyé au visiteur pour lui donner ses identifiants',
 
 	// M
 	'message_inscription_ok' => 'Votre identifiant vous sera envoyé par email, une fois que votre demande d\'inscription aura été validée par un·e administrateur·trice.',

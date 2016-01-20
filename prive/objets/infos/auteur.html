@@ -18,9 +18,10 @@
 	]
 ]
 
-[(#STATUT|=={10nouveau}|et{#AUTORISER{valider,auteur,#ID_AUTEUR}}|oui)
-  [(#BOUTON_ACTION{<:valider_inscription:valider_membre:>,
-                   #URL_ACTION_AUTEUR{valider_auteur, #ID_AUTEUR, #SELF}})]
+[(#STATUT|=={nouveau}|et{#AUTORISER{valider,auteur,#ID_AUTEUR}}|oui)
+  [<p>(#BOUTON_ACTION{<:valider_inscription:valider_membre:>,
+                   #URL_ACTION_AUTEUR{valider_auteur, #ID_AUTEUR, #SELF}})</p>]
+  <p><:valider_inscription:info_valider:></p>
 ]
 
 <INCLURE{fond=prive/objets/infos/inc-auteur-rubriques,id_auteur,statut} />

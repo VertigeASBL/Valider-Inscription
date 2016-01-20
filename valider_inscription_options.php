@@ -8,4 +8,4 @@
  * @licence    GNU/GPL
  */
 
-$GLOBALS['liste_des_statuts']['valider_inscription:info_10nouveau'] = '10nouveau';
+$GLOBALS['liste_des_statuts']['valider_inscription:info_nouveau'] = 'nouveau';
