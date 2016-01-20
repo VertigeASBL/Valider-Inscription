@@ -70,8 +70,8 @@ function action_inscrire_auteur($statut, $mail_complet, $nom, $options = array()
 	$notifications = charger_fonction('notifications', 'inc');
 	$notifications(
 		'inscription_a_valider',
-		$desc['id_auteur'],
-		array('nom' => $desc['nom'], 'email' => $desc['email'])
+		0,
+		array('nom' => $desc['nom'], 'email' => $desc['email'], 'id' => $desc['id_auteur'])
 	);
 
 	return $desc;
