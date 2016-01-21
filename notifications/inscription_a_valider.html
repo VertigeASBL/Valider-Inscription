@@ -1,3 +1,5 @@
-# <:valider_inscription:notification_inscription_a_valider_titre{nom_site,#NOM_SITE_SPIP}:>
+<:valider_inscription:notification_inscription_a_valider_titre{nom_site=#NOM_SITE_SPIP}:>
 
-<:valider_inscription:notification_inscription_a_valider_texte{nom_site, #NOM_SITE_SPIP, lien_auteur, #URL_ECRIRE{auteur, #ENV{id}}}:>
+[(#SET{url_auteur, #URL_ECRIRE{auteur, id_auteur=#ENV{options}|table_valeur{id}}})]
+
+<:valider_inscription:notification_inscription_a_valider_texte{nom_site=#NOM_SITE_SPIP, lien_auteur=#GET{url_auteur}}:>
