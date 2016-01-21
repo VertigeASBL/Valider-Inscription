@@ -18,13 +18,16 @@ function action_valider_auteur_dist() {
         die(minipres($msg));
     }
 
+    include_spip('base/abstract_sql');
+    // le statut à donné a été enregistré dans le champs « prefs »
+    $statut = sql_getfetsel('prefs', 'spip_auteurs', 'id_auteur='.intval($id_auteur));
+
     include_spip('action/editer_objet');
-    if ($err = objet_modifier('auteur', $id_auteur, array('statut' => '6forum'))) {
+    if ($err = objet_modifier('auteur', $id_auteur, array('statut' => $statut))) {
         include_spip('inc/minipres');
         die(minipres(_T('valider_inscription:erreur_validation'), $err));
     }
 
-    include_spip('base/abstract_sql');
     $desc = sql_fetsel(
 	    'statut, id_auteur, login, email',
 	    'spip_auteurs',
@@ -53,7 +56,7 @@ function action_valider_auteur_dist() {
 	}
 
 	$envoyer_inscription = charger_fonction('envoyer_inscription', '');
-	list($sujet, $msg, $from, $head) = $envoyer_inscription($desc, $nom, '6forum');
+	list($sujet, $msg, $from, $head) = $envoyer_inscription($desc, $nom, $statut);
 
 	include_spip('inc/notifications');
 	notifications_envoyer_mails($desc['email'], $msg, $sujet, $from, $head);
