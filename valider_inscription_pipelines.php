@@ -23,3 +23,16 @@ function valider_inscription_formulaire_traiter($flux) {
 
 	return $flux;
 }
+
+function valider_inscription_accueil_encours($flux) {
+
+	$flux .= recuperer_fond(
+		'prive/objets/liste/auteurs',
+		array(
+			'statut' => 'nouveau',
+			'titre' => _T('valider_inscription:titre_notification_inscription_a_valider')
+		)
+	);
+
+	return $flux;
+}

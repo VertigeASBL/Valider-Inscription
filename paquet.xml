@@ -20,5 +20,6 @@
 
 	<pipeline nom="autoriser" inclure="valider_inscription_autorisations.php" />
 	<pipeline nom="formulaire_traiter" inclure="valider_inscription_pipelines.php" />
+	<pipeline nom="accueil_encours" inclure="valider_inscription_pipelines.php" />
 
 </paquet>
