@@ -14,8 +14,6 @@
 
 	<licence>GNU/GPL</licence>
 
-	<necessite nom="notifavancees" />
-
 	<utilise nom="auteur2zone" />
 
 	<pipeline nom="autoriser" inclure="valider_inscription_autorisations.php" />
